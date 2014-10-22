@@ -29,6 +29,19 @@ cacheSolve <- function(x, ...) {
   #For this assignment, assume that the matrix supplied is always invertible.
   #Otherwise we should test.
   invx <- solve(data, ...)
-  x$setmean(invx)
+  x$setinverse(invx)
   invx
 }
+
+
+
+#Test with diag(3)
+# ma <- diag(3)
+# ma
+# maa <- makeCacheMatrix(ma)
+# maa$get()
+# maa$getinverse()
+# maa$setinverse()
+# cacheSolve(maa)
+# maa$getinverse()
+
